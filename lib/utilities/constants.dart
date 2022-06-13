@@ -18,3 +18,9 @@ const kButtonTextStyle = TextStyle(
 const kConditionTextStyle = TextStyle(
   fontSize: 100.0,
 );
+
+const String kLocationServicesDisabledMessage =
+    'Location services are disabled.';
+const String kPermissionDeniedMessage = 'Permission denied.';
+const String kPermissionDeniedForeverMessage = 'Permission denied forever.';
+const String kPermissionGrantedMessage = 'Permission granted.';
