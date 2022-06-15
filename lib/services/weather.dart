@@ -7,15 +7,19 @@ class WeatherModel {
   final String _openWeatherMapURL =
       'https://api.openweathermap.org/data/2.5/weather';
 
+  Future<dynamic> getCityWeather(String cityName) {
+    var networkHelper = NetworkHelper(
+      '$_openWeatherMapURL?q=$cityName&appid=$kOpenWeatherMapsAPIKey&units=metric',
+    );
+    return networkHelper.getData();
+  }
+
   Future<dynamic> getLocationWeather() async {
     final Location location = Location();
     await location.getCurrentLocation();
     if (kDebugMode) {
       print(location);
     }
-
-    // const latitude = -25.44144144144144;
-    // const longitude = -49.303764323032915;
     var networkHelper = NetworkHelper(
       '$_openWeatherMapURL'
       '?lat=${location.latitude.toString()}&lon=${location.longitude.toString()}'
