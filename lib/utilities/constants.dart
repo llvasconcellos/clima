@@ -21,6 +21,23 @@ const kConditionTextStyle = TextStyle(
   fontSize: 100.0,
 );
 
+const kTextFieldInputDecoration = InputDecoration(
+  hintText: 'Enter City Name',
+  hintStyle: TextStyle(
+    color: Color(0xff424242),
+  ),
+  filled: true,
+  fillColor: Color(0x77ffffff),
+  icon: Icon(
+    Icons.location_city,
+    color: Colors.white,
+  ),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(10)),
+    borderSide: BorderSide.none,
+  ),
+);
+
 const String kLocationServicesDisabledMessage =
     'Location services are disabled.';
 const String kPermissionDeniedMessage = 'Permission denied.';

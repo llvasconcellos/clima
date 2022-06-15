@@ -16,7 +16,7 @@ class _CityScreenState extends State<CityScreen> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/city_background.jpg'),
+            image: AssetImage('assets/images/city_background.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -36,7 +36,13 @@ class _CityScreenState extends State<CityScreen> {
               ),
               Container(
                 padding: const EdgeInsets.all(20.0),
-                child: null,
+                child: TextField(
+                  style: TextStyle(color: Colors.grey.shade900),
+                  decoration: kTextFieldInputDecoration,
+                  onChanged: (value){
+                    print(value);
+                  },
+                ),
               ),
               TextButton(
                 onPressed: () {},
